@@ -22,7 +22,7 @@
     </form>
 </body>
 </html>
-
+<--! comment section --->
 <?php
     include 'footer.php';
 ?>
