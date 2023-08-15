@@ -4,7 +4,7 @@ session_start();
 $comment = $_POST['comment'];
 $author = $_POST['author'];
 
-require_once "../../config/config_me.php";
+require_once "../../config.php";
 
 $connection = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -12,16 +12,16 @@ if (!$connection) {
     die("Database connection failed: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO comments_db (comment, author) 
-        VALUES ('$comment', '$author')";
+$sql = "INSERT INTO comments (comment, author, date_time) 
+        VALUES ('$comment', '$author', NOW())";
 
 if (mysqli_query($connection, $sql)) {
-    echo "Tagasiside saadetud.";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($connection);
 }
 
 mysqli_close($connection);
+
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +32,9 @@ mysqli_close($connection);
     <title>Comment saved</title>
 </head>
 <body>
-    Comment sent!
+    <form action="index.php" method="post">
+        <!-- Your form inputs go here (comment and author) -->
+        <input type="submit" name="submit" value="bACKS">
+    </form>
 </body>
 </html>

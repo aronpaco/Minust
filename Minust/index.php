@@ -11,18 +11,26 @@
 </head>
 <body>
     <h1>LEAVE A COMMENT</h1>
-    <form action="process_comment.php" method="post">
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author">
-        <br>
-        <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+    <form method="post" action="process_comment.php">
+            <label for="overall_feedback" id="overall_feedback">Leave a comment </label>
+            <br>
+
+            <label for="comment" id="comment">Comment here: </label>
+            <br>
+            <input type="text" name="comment" id="comment" placeholder="Comment..." maxlength="400">
+            <br>
+
+            <label for="author" id="author">Kui soovid jätta detailsemat tagasisidet:</label>
+            <br>
+            <textarea name="author" id="author" placeholder="Trüki siia" maxlength="400"></textarea>
+            <br>
+
+            <button class="submit_btn" type="submit">Send comment</button>
+            <br>
+        </form>
 </body>
 </html>
-<--! comment section --->
+
 <?php
     include 'footer.php';
 ?>
