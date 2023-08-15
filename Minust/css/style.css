@@ -1,7 +1,7 @@
 /* Reset some default margin and padding */
 body, html {
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: 25;
     height: 100%;
 }
 
@@ -17,11 +17,105 @@ main {
     flex: 1;
 }
 
-/* Style the footer */
+#commentContainer, #leaveCommentContainer {
+    margin: auto;
+    background-color: #c2c2c2;
+    max-width: 80%;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+td {
+    background-color: aqua;
+    width: auto;
+}
+
+th {
+    background-color: burlywood;
+}
+
+
+
+
+
+
+/* Style for each individual comment */
+.comment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Style for the comment text */
+.comment-text {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+/* Style for the author */
+.author {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Style for the date and time */
+.date-time {
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* HEADER AND FOOTER //////////////////////////////////////////////////////*/
+
+/* Style for the header */
+header {
+    background-color: #333;
+    color: white;
+}
+
+/* Style for the navigation */
+nav ul {
+    
+    display: flex; /* Use flexbox to display items side by side */
+    
+}
+
+/* Style for each navigation item */
+
+
+
+
+/* Remove margin from the last item */
+nav li:last-child {
+    margin-right: 0;
+}
+
+
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
     width: 100%;
+}
+
+/* HEADER AND FOOTER //////////////////////////////////////////////////*/
+
+
+a {
+    color: black;
+    background-color: lightskyblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 20px;
+}
+
+a:hover {
+    color: black;
+    background-color: lightblue;
 }
